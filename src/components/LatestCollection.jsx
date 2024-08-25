@@ -5,7 +5,7 @@ import Title from "./Title";
 const LatestCollection = () => {
   const { products } = useContext(ShopContext);
   const [latestProducts, setLatestProducts] = useState([]);
-
+  console.log(latestProducts)
   useEffect(() => {
     setLatestProducts(products.slice(0, 10));
   }, []);
@@ -18,6 +18,7 @@ const LatestCollection = () => {
           fugit laudantium neque dolorem accusamus!
         </p>
       </div>
+      
     </div>
   );
 };
