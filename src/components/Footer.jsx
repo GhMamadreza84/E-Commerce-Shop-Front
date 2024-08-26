@@ -23,7 +23,20 @@ const Footer = () => {
           </ul>
         </div>
 
+        <div className="">
+          <p className='mb-5 text-xl font-medium'>GET IN TOUCH </p>
+          <ul className='flex flex-col gap-1 text-gray-600 '>
+            <li>+98-954-153-245</li>
+            <li>contact@glowmarket.com</li>
+          </ul>               
+        </div>
+
       </div>
+
+        <div className="">
+          <hr />
+          <p className='py-5 text-sm text-center'>Copyright 2024@ glowmarket.com - All Right Reserved</p>
+        </div>
     </div>
   )
 }
