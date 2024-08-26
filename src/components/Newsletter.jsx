@@ -4,7 +4,13 @@ const Newsletter = () => {
   return (
     <div className='text-center'>
       <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off</p>
-      
+      <p className="mt-3 text-gray-400 ">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, soluta?
+      </p>
+      <form >
+        <input className='flex w-full outline-none sm:flex-1 ' type="email" placeholder='Enter your email' required/>
+        <button type='submit' className='px-10 py-4 text-xs text-white bg-black'>SUBSCRIBE</button>
+      </form>
     </div>
   )
 }
