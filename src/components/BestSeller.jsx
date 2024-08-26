@@ -17,6 +17,8 @@ const BestSeller = () => {
         <Title text1={"BEST"} text2={"SELLERS"} />
         <p className="w-3/4 m-auto text-xs text-gray-600 sm:text-sm md:text-base"></p>
       </div>
+      {/* Rendering Products */}
+      
     </div>
   );
 };
