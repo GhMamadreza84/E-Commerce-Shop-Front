@@ -38,6 +38,11 @@ const Collection = () => {
         category.includes(item.category)
       );
     }
+    if (subCategory.length > 0) {
+      productCopy = productCopy.filter((item) =>
+        subCategory.includes(item.subCategory)
+      );
+    }
     setFilterProducts(productCopy);
   };
 
