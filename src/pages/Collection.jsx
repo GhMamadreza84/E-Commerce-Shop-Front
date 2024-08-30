@@ -35,6 +35,9 @@ const Collection = () => {
     console.log(category);
   }, [category]);
 
+  useEffect(() => {
+    console.log(subCategory);
+  }, [subCategory]);
   return (
     <div className="flex flex-col gap-1 pt-10 border-t sm:flex-row sm:gap-10 ">
       {/* Filter Options  */}
