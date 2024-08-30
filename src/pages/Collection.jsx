@@ -51,11 +51,11 @@ const Collection = () => {
     let fpCopy = filterProducts.slice();
     switch (sortType) {
       case "low-high":
-        setFilterProducts(fpCopy.sort(a, (b) => a.price - b.price));
+        setFilterProducts(fpCopy.sort((a, b) => a.price - b.price));
         break;
 
       case "high-low":
-        setFilterProducts(fpCopy.sort(a, (b) => b.price - a.price));
+        setFilterProducts(fpCopy.sort((a, b) => b.price - a.price));
         break;
 
       default:
@@ -67,6 +67,10 @@ const Collection = () => {
   useEffect(() => {
     applyFilter();
   }, [category, subCategory]);
+
+  useEffect(() => {
+    sortProducts();
+  }, [sortType]);
 
   return (
     <div className="flex flex-col gap-1 pt-10 border-t sm:flex-row sm:gap-10 ">
