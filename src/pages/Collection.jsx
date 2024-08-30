@@ -9,7 +9,10 @@ const Collection = () => {
     <div className="flex flex-col gap-1 pt-10 border-t sm:flex-row sm:gap-10 ">
       {/* Filter Options  */}
       <div className="min-w-60">
-        <p className="flex items-center gap-2 my-2 text-xl cursor-pointer">
+        <p
+          onClick={() => setShowFilter(!showFilter)}
+          className="flex items-center gap-2 my-2 text-xl cursor-pointer"
+        >
           FILTERS
           <img
             className={`h-3 sm:hidden ${showFilter ? "rotate-90 " : ""}`}
