@@ -38,7 +38,12 @@ const Collection = () => {
         category.includes(item.category)
       );
     }
+    setFilterProducts(productCopy);
   };
+
+  useEffect(() => {
+    applyFilter();
+  }, [category, subCategory]);
 
   return (
     <div className="flex flex-col gap-1 pt-10 border-t sm:flex-row sm:gap-10 ">
