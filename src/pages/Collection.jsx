@@ -22,7 +22,11 @@ const Collection = () => {
   useEffect(() => {
     setFilterProducts(products);
   }, []);
-  console.log(filterProducts);
+  
+  useEffect(() => {
+    console.log(category);
+  }, [category]);
+  
   return (
     <div className="flex flex-col gap-1 pt-10 border-t sm:flex-row sm:gap-10 ">
       {/* Filter Options  */}
@@ -47,13 +51,31 @@ const Collection = () => {
           <p className="mb-3 text-sm font-medium ">CATEGORIES</p>
           <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
             <p className="flex gap-2">
-              <input className="w-3 " type="checkbox" value={"Men"} onChange={toggleCategory}/> Men
+              <input
+                className="w-3 "
+                type="checkbox"
+                value={"Men"}
+                onChange={toggleCategory}
+              />{" "}
+              Men
             </p>
             <p className="flex gap-2">
-              <input className="w-3 " type="checkbox" value={"Women"} onChange={toggleCategory}/> Women
+              <input
+                className="w-3 "
+                type="checkbox"
+                value={"Women"}
+                onChange={toggleCategory}
+              />{" "}
+              Women
             </p>
             <p className="flex gap-2">
-              <input className="w-3 " type="checkbox" value={"Kids"} onChange={toggleCategory}/> Kids
+              <input
+                className="w-3 "
+                type="checkbox"
+                value={"Kids"}
+                onChange={toggleCategory}
+              />{" "}
+              Kids
             </p>
           </div>
         </div>
