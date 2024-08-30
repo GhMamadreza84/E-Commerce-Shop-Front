@@ -19,14 +19,22 @@ const Collection = () => {
     }
   };
 
+  const toggleSubCategory = (e) => {
+    if (subCategory.includes(e.target.value)) {
+      setSubCategory((prev) => prev.filter((item) => item !== e.target.value));
+    } else {
+      setSubCategory((prev) => [...prev, e.target.value]);
+    }
+  };
+
   useEffect(() => {
     setFilterProducts(products);
   }, []);
-  
+
   useEffect(() => {
     console.log(category);
   }, [category]);
-  
+
   return (
     <div className="flex flex-col gap-1 pt-10 border-t sm:flex-row sm:gap-10 ">
       {/* Filter Options  */}
