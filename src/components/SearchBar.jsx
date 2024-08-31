@@ -3,8 +3,8 @@ import { ShopContext } from "../context/ShopContext";
 
 const SearchBar = () => {
   const { search, setSearch, showSearch, setShowSearch } =
-    useContext(ShopContext); 
-  return <div></div>;
+    useContext(ShopContext);
+  return showSearch ? <div></div> : null;
 };
 
 export default SearchBar;
