@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
+import { assets } from "../assets/assets";
 
 const SearchBar = () => {
   const { search, setSearch, showSearch, setShowSearch } =
@@ -14,7 +15,14 @@ const SearchBar = () => {
           type="text"
           placeholder="Search"
         />
+        <img className="w-4" src={assets.search_icon} alt="search-icon" />
       </div>
+        <img
+          onClick={() => setShowSearch(false)}
+          className="inline w-3 cursor-pointer"
+          src={assets.cross_icon}
+          alt="cross-icon"
+        />
     </div>
   ) : null;
 };
