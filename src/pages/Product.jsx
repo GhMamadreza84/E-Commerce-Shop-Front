@@ -5,9 +5,17 @@ import { ShopContext } from "../context/ShopContext";
 const Product = () => {
   const { productId } = useParams();
   const { products } = useContext(ShopContext);
-  const { productData, setProductData } = useState(false);
+  const [productData, setProductData] = useState(false);
 
-  const fetchProductData = async () => {};
+  const fetchProductData = async () => {
+    products.map((item) => {
+      if (item._id === productId) {
+        setProductData(item);
+        console.log(productData)
+        return null;
+      }
+    });
+  };
 
   useEffect(() => {
     fetchProductData();
