@@ -35,6 +35,7 @@ const Product = () => {
               ))
             }
           </div>
+          <div className=""></div>
         </div>
       </div>
     </div>
