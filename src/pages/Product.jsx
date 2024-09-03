@@ -22,7 +22,14 @@ const Product = () => {
     fetchProductData();
   }, [productId, products]);
 
-  return productData ? <div></div> : <div className="opacity-0"></div>;
+  return productData ? (
+    <div className="pt-10 transition-opacity duration-500 ease-in border-t-2 opacity-100 ">
+      {/* Product Data */}
+      <div className="flex flex-col gap-12 sm:gap-12 sm:flex-row"></div>
+    </div>
+  ) : (
+    <div className="opacity-0"></div>
+  );
 };
 
 export default Product;
