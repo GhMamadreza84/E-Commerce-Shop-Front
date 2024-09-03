@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 
@@ -8,6 +8,10 @@ const Product = () => {
   const { productData, setProductData } = useState(false);
 
   const fetchProductData = async () => {};
+
+  useEffect(() => {
+    fetchProductData();
+  }, [productId, products]);
 
   return <div></div>;
 };
