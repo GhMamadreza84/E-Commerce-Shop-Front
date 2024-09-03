@@ -6,12 +6,13 @@ const Product = () => {
   const { productId } = useParams();
   const { products } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
-
+  const [image, setImage] = useState("");
   const fetchProductData = async () => {
     products.map((item) => {
       if (item._id === productId) {
         setProductData(item);
-        console.log(productData)
+        setImage(item.image[0]);
+        console.log(productData);
         return null;
       }
     });
@@ -21,7 +22,7 @@ const Product = () => {
     fetchProductData();
   }, [productId, products]);
 
-  return <div></div>;
+  return productData ? <div></div> : <div className="opacity-0"></div>;
 };
 
 export default Product;
