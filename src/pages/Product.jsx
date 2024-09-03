@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 
 const Product = () => {
   const { productId } = useParams();
   const { products } = useContext(ShopContext);
+  const { productData, setProductData } = useState(false);
+
+  const fetchProductData = async () => {};
+
   return <div></div>;
 };
 
