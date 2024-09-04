@@ -35,7 +35,9 @@ const Product = () => {
               ))
             }
           </div>
-          <div className=""></div>
+          <div className="">
+            <img src={image} alt="" />
+          </div>
         </div>
       </div>
     </div>
