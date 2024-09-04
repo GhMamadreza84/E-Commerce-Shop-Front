@@ -98,6 +98,10 @@ const Product = () => {
           <b className="px-5 py-3 text-sm border">Description</b>
           <p className="px-5 py-3 text-sm border">Review (122)</p>
         </div>
+        <div className="flex flex-col gap-4 p-6 text-sm text-gray-500 border">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus inventore natus odit delectus necessitatibus exercitationem tempora facilis distinctio odio eum deserunt, aut vero enim? Placeat cum quam consequuntur error unde.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsam. Reprehenderit quae voluptates ex mollitia repellendus iste ipsa ea perferendis soluta et nulla, sunt veniam qui facilis impedit maiores omnis?</p>
+        </div>
       </div>
     </div>
   ) : (
