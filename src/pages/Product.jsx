@@ -29,21 +29,21 @@ const Product = () => {
       <div className="flex flex-col gap-12 sm:gap-12 sm:flex-row">
         {/* ------------ Product Images ------------ */}
         <div className="flex flex-col-reverse flex-1 gap-3 sm:flex-row ">
-          <div className="flex flex-col justify-between overflow-x-auto sm:overflow-y-auto sm:justify-normal sm:w-[18.7%] w-full ">
+          <div className="flex flex-row justify-between overflow-x-auto sm:overflow-y-auto sm:justify-between sm:flex-col sm:w-[18.7%] w-full ">
             {productData.image.map((item, index) => (
               <img
                 onClick={() => {
                   setImage(item);
                 }}
-                className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer "
+                className="w-[24%] sm:w-full sm:mb-0 flex-shrink-0 cursor-pointer "
                 src={item}
                 key={index}
                 alt="image-product"
               />
             ))}
           </div>
-          <div className="">
-            <img className="w-full h-auto" src={image} alt="image-cover-big" />
+          <div className="w-full sm:w-[80%]">
+            <img className="w-full h-full" src={image} alt="image-cover-big" />
           </div>
         </div>
         {/* ---------- Product Info ----------- */}
@@ -57,8 +57,13 @@ const Product = () => {
             <img src={assets.star_dull_icon} alt="" className="w-3 5" />
             <p className="pl-2">(122)</p>
           </div>
-          <p className="mt-5 text-3xl font-medium ">{currency}{productData.price}</p>
-          <p className="mt-5 text-gray-500 md:w-4/5 ">{productData.description}</p>
+          <p className="mt-5 text-3xl font-medium ">
+            {currency}
+            {productData.price}
+          </p>
+          <p className="mt-5 text-gray-500 md:w-4/5 ">
+            {productData.description}
+          </p>
         </div>
       </div>
     </div>
