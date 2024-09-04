@@ -93,6 +93,12 @@ const Product = () => {
         </div>
       </div>
       {/* ------------ Description & Review Section ------------ */}
+      <div className="mt-20">
+        <div className="flex">
+          <b className="px-5 py-3 text-sm border">Description</b>
+          <p className="px-5 py-3 text-sm border">Review (122)</p>
+        </div>
+      </div>
     </div>
   ) : (
     <div className="opacity-0"></div>
