@@ -24,9 +24,9 @@ const Product = () => {
 
   return productData ? (
     <div className="pt-10 transition-opacity duration-500 ease-in border-t-2 opacity-100 ">
-      {/* Product Data */}
+      {/* ------------ Product Data ------------ */}
       <div className="flex flex-col gap-12 sm:gap-12 sm:flex-row">
-        {/* Product Images */}
+        {/* ------------ Product Images ------------ */}
         <div className="flex flex-col-reverse flex-1 gap-3 sm:flex-row ">
           <div className="flex flex-col justify-between overflow-x-auto sm:overflow-y-auto sm:justify-normal sm:w-[18.7%] w-full ">
             {productData.image.map((item, index) => (
@@ -44,6 +44,10 @@ const Product = () => {
           <div className="">
             <img className="w-full h-auto" src={image} alt="image-cover-big" />
           </div>
+        </div>
+        {/* ---------- Product Info ----------- */}
+        <div className="flex-1 ">
+          <h1 className="mt-2 text-2xl font-medium">{productData.name}</h1>
         </div>
       </div>
     </div>
