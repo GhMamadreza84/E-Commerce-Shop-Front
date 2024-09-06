@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { ShopContext } from "../context/ShopContext";
 
-const RelatedProduct = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const RelatedProduct = ({ category, subCategory }) => {
+  const { products } = useContext(ShopContext);
 
-export default RelatedProduct
+  return <div></div>;
+};
+
+export default RelatedProduct;
