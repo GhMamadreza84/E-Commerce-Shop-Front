@@ -14,7 +14,7 @@ const RelatedProduct = ({ category, subCategory }) => {
       );
       setRelated(productCopy.slice(0, 5));
     }
-  }, []);
+  }, [products]);
   return <div></div>;
 };
 
