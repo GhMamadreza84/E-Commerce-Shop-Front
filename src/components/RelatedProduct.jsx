@@ -5,7 +5,7 @@ import ProductItem from "../components/ProductItem";
 const RelatedProduct = ({ category, subCategory }) => {
   const { products } = useContext(ShopContext);
   const [related, setRelated] = useState([]);
-  console.log(category);
+  
   useEffect(() => {
     if (products.length > 0) {
       let productCopy = products.slice();

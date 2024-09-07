@@ -9,13 +9,12 @@ const Product = () => {
   const { products, currency, addToCart } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
-  const [sizeSelected, setSizeSelected] = useState(null);
+  const [size, setSize] = useState(null);
   const fetchProductData = async () => {
     products.map((item) => {
       if (item._id === productId) {
         setProductData(item);
         setImage(item.image[0]);
-        console.log(productData);
         return null;
       }
     });
@@ -71,9 +70,9 @@ const Product = () => {
             <div className="flex gap-2">
               {productData.sizes.map((item, index) => (
                 <button
-                  onClick={() => setSizeSelected(item)}
+                  onClick={() => setSize(item)}
                   className={`border py-2 px-4 bg-gray-100 ${
-                    sizeSelected === item ? "border-2 border-black" : ""
+                    size === item ? "border-2 border-black" : ""
                   }`}
                   key={index}
                 >
@@ -83,7 +82,7 @@ const Product = () => {
             </div>
           </div>
           <button
-            onClick={() => addToCart()}
+            onClick={() => addToCart(productData._id, size)}
             className="px-8 py-3 text-sm text-white bg-black active:bg-gray-700"
           >
             ADD TO CART
