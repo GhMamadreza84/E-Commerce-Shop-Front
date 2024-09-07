@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { products } from "../assets/assets.js";
 
 export const ShopContext = createContext();
@@ -25,6 +25,10 @@ const ShopContextProvider = (props) => {
     setCartItems(cartData);
   };
 
+  useEffect(() => {
+    console.log(cartItems);
+  }, [cartItems]);
+
   const value = {
     products,
     currency,
@@ -33,6 +37,8 @@ const ShopContextProvider = (props) => {
     setSearch,
     showSearch,
     setShowSearch,
+    cartItems,
+    addToCart,
   };
 
   return (
