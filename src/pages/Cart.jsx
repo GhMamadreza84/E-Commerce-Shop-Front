@@ -22,7 +22,11 @@ const Cart = () => {
     setCartData(tempData);
   }, [cartItems]);
 
-  return <div></div>;
+  return <div className="border-t pt-14">
+    
+  <div className=""></div>
+
+  </div>;
 };
 
 export default Cart;
