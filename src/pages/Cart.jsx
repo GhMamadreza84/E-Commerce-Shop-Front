@@ -27,6 +27,19 @@ const Cart = () => {
       <div className="mb-3 text-2xl">
         <Title text1={"YOUR"} text2={"CART"} />
       </div>
+      <div className="">
+        {cartData.map((item, index) => {
+          const productData = products.find(
+            (product) => product._id === item_id
+          );
+          return (
+            <div
+              className="grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4 py-4 text-gray-700 border-t border-b"
+              key={index}
+            ></div>
+          );
+        })}
+      </div>
     </div>
   );
 };
