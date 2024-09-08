@@ -30,13 +30,33 @@ const Cart = () => {
       <div className="">
         {cartData.map((item, index) => {
           const productData = products.find(
-            (product) => product._id === item_id
+            (product) => product._id === item._id
           );
           return (
             <div
               className="grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4 py-4 text-gray-700 border-t border-b"
               key={index}
-            ></div>
+            >
+              <div className="flex items-start gap-6">
+                <img
+                  className="w-16 sm:w-20 "
+                  src={productData.image[0]}
+                  alt=""
+                />
+                <div>
+                  <p className="text-sm font-medium sm:text-lg">
+                    {productData.name}
+                  </p>
+                  <div className="flex items-start gap-5 mt-2">
+                    <p className="">
+                      {currency}
+                      {productData.price}
+                    </p>
+                    <p className="px-2 border sm:px-3 lg:py-1 bg-slate-50 ">{item.size}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           );
         })}
       </div>
