@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
-
+import Title from "../components/Title";
 const Cart = () => {
   const { products, currency, cartItems } = useContext(ShopContext);
 
@@ -22,11 +22,13 @@ const Cart = () => {
     setCartData(tempData);
   }, [cartItems]);
 
-  return <div className="border-t pt-14">
-    
-  <div className=""></div>
-
-  </div>;
+  return (
+    <div className="border-t pt-14">
+      <div className="mb-3 text-2xl">
+        <Title text1={"YOUR"} text2={"CART"} />
+      </div>
+    </div>
+  );
 };
 
 export default Cart;
