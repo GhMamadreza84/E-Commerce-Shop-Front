@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import Title from "../components/Title";
+import { assets } from "../assets/assets";
 const Cart = () => {
   const { products, currency, cartItems } = useContext(ShopContext);
 
@@ -63,7 +64,9 @@ const Cart = () => {
                 className="px-1 py-1 border max-w-10 sm:max-w-20 sm:px-2"
                 min={1}
                 defaultValue={item.quantity}
+
               />
+              <img src={assets.bin_icon} className="w-4 mr-4 cursor-pointer sm:w-5" alt="bin-icon" />
             </div>
           );
         })}
