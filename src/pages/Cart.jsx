@@ -61,6 +61,11 @@ const Cart = () => {
                 </div>
               </div>
               <input
+                onChange={(e) => {
+                  e.target.value === "" || e.target.value === "0"
+                    ? null
+                    : updateQuantity(item._id, item.size,  e.target.value);
+                }}
                 type="number"
                 className="px-1 py-1 border max-w-10 sm:max-w-20 sm:px-2"
                 min={1}
