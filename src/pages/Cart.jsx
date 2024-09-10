@@ -56,6 +56,7 @@ const Cart = () => {
                   </div>
                 </div>
               </div>
+              <input type="number" />
             </div>
           );
         })}
