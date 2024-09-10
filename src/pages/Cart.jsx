@@ -3,7 +3,7 @@ import { ShopContext } from "../context/ShopContext";
 import Title from "../components/Title";
 import { assets } from "../assets/assets";
 const Cart = () => {
-  const { products, currency, cartItems } = useContext(ShopContext);
+  const { products, currency, cartItems ,updateQuantity} = useContext(ShopContext);
 
   const [cartData, setCartData] = useState([]);
 
