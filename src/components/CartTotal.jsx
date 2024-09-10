@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
 import Title from "./Title";
-import { getSearchParamsForLocation } from "react-router-dom/dist/dom";
 
 const CartTotal = () => {
   const { currency, getCartAmount, delivery_fee } = useContext(ShopContext);
@@ -29,7 +28,7 @@ const CartTotal = () => {
         <div className="flex justify-between">
           <b>Total</b>
           <b>
-            {currency}{" "}
+            {currency}
             {getCartAmount() === 0 ? 0 : getCartAmount() + delivery_fee}
           </b>
         </div>
