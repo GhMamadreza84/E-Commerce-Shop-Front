@@ -52,11 +52,18 @@ const Cart = () => {
                       {currency}
                       {productData.price}
                     </p>
-                    <p className="px-2 border sm:px-3 lg:py-1 bg-slate-50 ">{item.size}</p>
+                    <p className="px-2 border sm:px-3 lg:py-1 bg-slate-50 ">
+                      {item.size}
+                    </p>
                   </div>
                 </div>
               </div>
-              <input type="number" />
+              <input
+                type="number"
+                className="px-1 py-1 border max-w-10 sm:max-w-20 sm:px-2"
+                min={1}
+                defaultValue={item.quantity}
+              />
             </div>
           );
         })}
