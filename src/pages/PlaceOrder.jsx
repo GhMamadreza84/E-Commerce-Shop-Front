@@ -9,7 +9,60 @@ const PlaceOrder = () => {
         <div className="my-3 text-xl sm:text-2xl">
           <Title text1={"DELIVERY"} text2={"INFORMATION"} />
         </div>
+        <div className="flex gap-3 ">
+          <input
+            type="text"
+            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            placeholder="First name"
+          />
+          <input
+            type="text"
+            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            placeholder="Last name"
+          />
+        </div>
+        <input
+          type="email"
+          className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+          placeholder="Email Address  "
+        />
+        <input
+          type="text"
+          className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+          placeholder="Street"
+        />
+        <div className="flex gap-3">
+          <input
+            type="text"
+            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            placeholder="City"
+          />
+          <input
+            type="text"
+            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            placeholder="State"
+          />
+        </div>
+        <div className="flex gap-3">
+          <input
+            type="number"
+            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            placeholder="Zipcode"
+          />
+          <input
+            type="text"
+            className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+            placeholder="Country"
+          />
+        </div>
+        <input
+          type="Number"
+          className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
+          placeholder="Phone"
+        />
       </div>
+      {/* ------------Right Side---------- */}
+      
     </div>
   );
 };
