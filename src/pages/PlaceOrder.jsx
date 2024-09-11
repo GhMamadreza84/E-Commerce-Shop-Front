@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../components/Title";
 import CartTotal from "../components/CartTotal";
+import { assets } from "../assets/assets";
 
 const PlaceOrder = () => {
   return (
@@ -68,7 +69,22 @@ const PlaceOrder = () => {
           <CartTotal />
         </div>
         <div className="mt-12">
-          <Title text1={'PAYMENT'} text2={'METHOD'} />
+          <Title text1={"PAYMENT"} text2={"METHOD"} />
+          {/* --------------Payment Method Selection--------------- */}
+          <div className="flex flex-col gap-3 lg:flex-row">
+            <div className="flex items-center gap-3 p-2 px-3 border cursor-pointer">
+              <p className={`min-w-3.5 h-3.5 border rounded-full`}></p>
+              <img src={assets.stripe_logo} className="h-5 mx-4" alt="stripe-logo" />
+            </div>
+            <div className="flex items-center gap-3 p-2 px-3 border cursor-pointer">
+              <p className={`min-w-3.5 h-3.5 border rounded-full`}></p>
+              <img src={assets.razorpay_logo} className="h-5 mx-4" alt="razorpay-logo" />
+            </div>
+            <div className="flex items-center gap-3 p-2 px-3 border cursor-pointer">
+              <p className={`min-w-3.5 h-3.5 border rounded-full`}></p>
+              <p className="mx-4 text-sm font-medium text-gray-500i">CASH ON DELIVERY</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
