@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Title from "../components/Title";
 import CartTotal from "../components/CartTotal";
 import { assets } from "../assets/assets";
+import { ShopContext } from "../context/ShopContext";
 
 const PlaceOrder = () => {
   const [method, setMethod] = useState("cod");
-
+  const { navigate } = useContext(ShopContext);
   return (
     <div className="flex flex-col justify-between gap-4 sm:flex-row pt-5 sm:pt-14 min-h-[80vh] border-t ">
       {/* --------------Left  Side---------------- */}
@@ -116,6 +117,11 @@ const PlaceOrder = () => {
                 CASH ON DELIVERY
               </p>
             </div>
+          </div>
+          <div className="w-full mt-8 text-end ">
+            <button className="px-16 py-3 text-sm text-white bg-black">
+              PLACE ORDER
+            </button>
           </div>
         </div>
       </div>
