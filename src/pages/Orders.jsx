@@ -33,6 +33,13 @@ const Orders = () => {
                 </p>
               </div>
             </div>
+            <div className="flex justify-between md:w-1/2 ">
+              <div className="flex items-center gap-2">
+                <p className="bg-green-500 rounded-full min-w-2 min-h-2 "></p>
+                <p className="text-sm md:text-base">Ready to ship</p>
+              </div>
+              <button className="px-4 py-2 text-sm font-medium border rounded-sm ">Track Order</button>
+            </div>
           </div>
         ))}
       </div>
