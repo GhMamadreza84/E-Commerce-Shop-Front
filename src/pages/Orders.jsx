@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { ShopContext } from "../context/ShopContext";
 
 const Orders = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const { products } = useContext(ShopContext);
+  return <div></div>;
+};
 
-export default Orders
+export default Orders;
