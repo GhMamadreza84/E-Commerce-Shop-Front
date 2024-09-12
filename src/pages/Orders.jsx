@@ -21,13 +21,16 @@ const Orders = () => {
               <div className="">
                 <p className="font-medium sm:text-base">{item.name}</p>
                 <div className="flex items-center gap-3 mt-2 text-base text-gray-700">
-                  <p className="">
+                  <p className="text-lg ">
                     {currency}
                     {item.price}
                   </p>
-                  <p className=""></p>
-                  <p className=""></p>
+                  <p className="">Quantity: 1</p>
+                  <p className="">Size: M</p>
                 </div>
+                <p className="mt-2">
+                  Date: <span className="text-gray-400">25, July, 2024</span>
+                </p>
               </div>
             </div>
           </div>
