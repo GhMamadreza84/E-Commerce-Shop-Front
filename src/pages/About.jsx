@@ -28,13 +28,15 @@ const About = () => {
           </p>
           <b className="text-gray-800 ">Our Mission </b>
           <p>
-            {" "}
             Our mission at Glowmarket is to empower customers with choice ,
             convenience , and confidence. We're dedicated to providing someless
             shopping experience that exceeds expectations, from browsing and
             ordering to delivery and beyond.
           </p>
         </div>
+      </div>
+      <div className="py-4 text-xl">
+        <Title text1={'WHY'} text2={'CHOOSE US'} /> 
       </div>
     </div>
   );
