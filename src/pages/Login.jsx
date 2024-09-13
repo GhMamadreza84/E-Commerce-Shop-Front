@@ -2,9 +2,14 @@ import React, { useState } from "react";
 
 const Login = () => {
   const [currentState, setCurrentState] = useState("Sign Up");
-
+  const onSubmitHandler = async (event) => {
+    event.preventDefault();
+  };
   return (
-    <form className="flex flex-col items-center w-[90%] sm:w-96 mt-14 m-auto gap-4 text-gray-800">
+    <form
+      onSubmit={onSubmitHandler}
+      className="flex flex-col items-center w-[90%] sm:w-96 mt-14 m-auto gap-4 text-gray-800"
+    >
       <div className="inline-flex items-center gap-2 mt-10 mb-2 ">
         <p className="text-3xl prata-regular ">{currentState}</p>
         <hr className="border-none h-[1.5px] w-8 bg-gray-800" />
@@ -47,7 +52,9 @@ const Login = () => {
           </p>
         )}
       </div>
-      <button className="px-8 py-2 mt-4 font-light text-white bg-black">{currentState === "Login" ? "Sign In" : "Sign Up"}</button>
+      <button className="px-8 py-2 mt-4 font-light text-white bg-black">
+        {currentState === "Login" ? "Sign In" : "Sign Up"}
+      </button>
     </form>
   );
 };
