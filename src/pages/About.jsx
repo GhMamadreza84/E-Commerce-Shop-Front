@@ -9,7 +9,7 @@ const About = () => {
       </div>
       <div className="flex flex-col gap-16 my-10 md:flex-row">
         <img
-          className="w-full md:max-w-[450px] "
+          className="w-full md:max-w-[450px] object-contain"
           src={assets.about_img}
           alt="about_img"
         />
@@ -25,6 +25,14 @@ const About = () => {
             perference . Form fashion and beauty to electronics and home
             essentials , we offer on extensive collection sourced from trusted
             brounds and suppliers.
+          </p>
+          <b className="text-gray-800 ">Our Mission </b>
+          <p>
+            {" "}
+            Our mission at Glowmarket is to empower customers with choice ,
+            convenience , and confidence. We're dedicated to providing someless
+            shopping experience that exceeds expectations, from browsing and
+            ordering to delivery and beyond.
           </p>
         </div>
       </div>
