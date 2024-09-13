@@ -9,14 +9,14 @@ const Login = () => {
         <p className="text-3xl prata-regular ">{currentState}</p>
         <hr className="border-none h-[1.5px] w-8 bg-gray-800" />
       </div>
-      {currentState === "Login" ? (
+      {currentState === "Login" ? null : (
         <input
           type="text"
           className="w-full px-3 py-2 border border-gray-800 "
           placeholder="Name"
           required
         />
-      ) : null}
+      )}
       <input
         type="email"
         className="w-full px-3 py-2 border border-gray-800 "
@@ -29,6 +29,14 @@ const Login = () => {
         placeholder="Password"
         required
       />
+      <div className="w-full flex justify-between text-sm mt-[-8px] ">
+        <p className="cursor-pointer">Forgot your password?</p>
+        {currentState === "Login" ? (
+          <p onClick={() => setCurrentState("Sign Up")} className="cursor-pointer">Create account</p>
+        ) : (
+          <p onClick={() => setCurrentState("Login")} className="cursor-pointer">Login Here</p>
+        )}
+      </div>
     </form>
   );
 };
