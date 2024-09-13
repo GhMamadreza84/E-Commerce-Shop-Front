@@ -36,7 +36,30 @@ const About = () => {
         </div>
       </div>
       <div className="py-4 text-xl">
-        <Title text1={'WHY'} text2={'CHOOSE US'} /> 
+        <Title text1={"WHY"} text2={"CHOOSE US"} />
+      </div>
+      <div className="flex flex-col mb-20 text-sm md:flex-row">
+        <div className="flex flex-col gap-5 px-10 py-8 border md:px-16 sm:py-20">
+          <b>Quality Assurance:</b>
+          <p className="text-gray-600">
+            We meticulously select and vet each product to ensure it meets our
+            stringent quality standards
+          </p>
+        </div>
+        <div className="flex flex-col gap-5 px-10 py-8 border md:px-16 sm:py-20">
+          <b>Convenience:</b>
+          <p className="text-gray-600">
+            With our user-friendly interface and hossle-free ordering process,
+            shopping has never easier.
+          </p>
+        </div>
+        <div className="flex flex-col gap-5 px-10 py-8 border md:px-16 sm:py-20">
+          <b>Expentional Customer Service:</b>
+          <p className="text-gray-600">
+            Our team of dedicated professionals is here to assist you the way,
+            ensuring your satification in our top priority.
+          </p>
+        </div>
       </div>
     </div>
   );
