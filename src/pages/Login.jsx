@@ -9,12 +9,14 @@ const Login = () => {
         <p className="text-3xl prata-regular ">{currentState}</p>
         <hr className="border-none h-[1.5px] w-8 bg-gray-800" />
       </div>
-      <input
-        type="text"
-        className="w-full px-3 py-2 border border-gray-800 "
-        placeholder="Name"
-        required
-      />
+      {currentState === "Login" ? (
+        <input
+          type="text"
+          className="w-full px-3 py-2 border border-gray-800 "
+          placeholder="Name"
+          required
+        />
+      ) : null}
       <input
         type="email"
         className="w-full px-3 py-2 border border-gray-800 "
