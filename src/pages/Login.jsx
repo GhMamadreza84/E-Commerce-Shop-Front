@@ -32,11 +32,22 @@ const Login = () => {
       <div className="w-full flex justify-between text-sm mt-[-8px] ">
         <p className="cursor-pointer">Forgot your password?</p>
         {currentState === "Login" ? (
-          <p onClick={() => setCurrentState("Sign Up")} className="cursor-pointer">Create account</p>
+          <p
+            onClick={() => setCurrentState("Sign Up")}
+            className="cursor-pointer"
+          >
+            Create account
+          </p>
         ) : (
-          <p onClick={() => setCurrentState("Login")} className="cursor-pointer">Login Here</p>
+          <p
+            onClick={() => setCurrentState("Login")}
+            className="cursor-pointer"
+          >
+            Login Here
+          </p>
         )}
       </div>
+      <button className="px-8 py-2 mt-4 font-light text-white bg-black">{currentState === "Login" ? "Sign In" : "Sign Up"}</button>
     </form>
   );
 };
