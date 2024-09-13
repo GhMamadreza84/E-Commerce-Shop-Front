@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const Login = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const [currentState, setCurrentState] = useState("Sign Up");
 
-export default Login
+  return <div></div>;
+};
+
+export default Login;
